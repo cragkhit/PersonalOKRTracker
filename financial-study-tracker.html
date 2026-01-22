@@ -345,7 +345,7 @@
             const notes = document.getElementById('notes').value;
 
             const session = {
-                id: Date.now(),
+                id: Date.now() + Math.random(),
                 date: date,
                 duration: duration,
                 notes: notes,
@@ -484,6 +484,19 @@
                     try {
                         const data = JSON.parse(e.target.result);
                         if (Array.isArray(data)) {
+                            // Validate session objects
+                            const isValid = data.every(session => 
+                                session.hasOwnProperty('id') &&
+                                session.hasOwnProperty('date') &&
+                                session.hasOwnProperty('duration') &&
+                                session.hasOwnProperty('timestamp')
+                            );
+                            
+                            if (!isValid) {
+                                alert('Invalid data format: sessions must have id, date, duration, and timestamp fields');
+                                return;
+                            }
+                            
                             if (confirm('This will replace all existing data. Continue?')) {
                                 saveSessions(data);
                                 loadSessions();
