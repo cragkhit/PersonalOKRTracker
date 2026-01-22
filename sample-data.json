@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1737516960000,
+    "date": "2026-01-22T03:56",
+    "duration": 90,
+    "notes": "Studied compound interest and investment strategies",
+    "timestamp": 1737516960000
+  },
+  {
+    "id": 1737517020000,
+    "date": "2026-01-22T03:57",
+    "duration": 45,
+    "notes": "Reviewed stock market basics",
+    "timestamp": 1737517020000
+  },
+  {
+    "id": 1737517080000,
+    "date": "2026-01-22T03:58",
+    "duration": 60,
+    "notes": "Budget planning and expense tracking",
+    "timestamp": 1737517080000
+  }
+]
